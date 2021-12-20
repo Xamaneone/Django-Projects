@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phones list</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<ul>
+    {% for phone in phones %}
+        <li class="list-item">
+            <h1>{{ phone.name }}</h1>
+            {% if phone.quantity %}
+                <a style="pointer-events: none" href="..../{PHONE_ID}" class="btn cta-buy">
+                    BUY "Out of Stock!"
+                </a>
+            {% else %}
+                <a style="pointer-events: none" href="..../{PHONE_ID}" class="btn cta-buy">
+                Out of stock!
+                </a>
+            {% endif %}
+        </li>
+    {% empty %}
+        No phones
+    {% endfor %}
+
+<h1></h1>
+
+
+<a href="/" class="btn cta-buy">
+                    Main Menu
+                </a>
+
+<a href="../phones_shop/" class="btn cta-buy">
+                    Shop
+                </a>
+
+
+
+<a href="../admin/" class="btn cta-buy">
+                    admin_panel
+                </a>
+
+
+</ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <title>{% block head_title %}Todos App!{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+ {% block styles %}
+ {% endblock %}
+
+</head>
+<body>
+
+{% include 'shared/partials/nav.html' with page=page_name %}
+
+{% block content %}
+{% endblock %}
+
+<footer>
+    This is a footer
+</footer>
+
+{% block scripts_body_end %}
+{% endblock %}
+</body>
+</html>

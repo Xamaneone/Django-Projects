@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Here, you can buy your phone instantly, without filling any blanks! Express shipping! FREE FOR A LIMITED TIME!!!</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<h2>Here, you can buy your phone instantly, without filling any blanks! Express shipping! FREE FOR A LIMITED TIME!!!</h2>
+<ul>
+    {% for phone in phones %}
+        <li class="list-item">
+            <h1>{{ phone.model }}</h1>
+            {% if phone.quantity %}
+                <a href="../transaction_done/" class="btn cta-buy">
+                    BUY
+                </a>
+            {% else %}
+                <a style="pointer-events: none" href="..../{PHONE_ID}" class="btn cta-buy">
+                Out of stock!
+                </a>
+            {% endif %}
+        </li>
+    {% empty %}
+        No phones
+    {% endfor %}
+
+
+</ul>
+
+<h1></h1>
+
+
+<a href="/" class="btn cta-buy">
+                    Main Menu
+                </a>
+
+
+
+<a href="../phones/" class="btn cta-buy">
+                    Phones
+                </a>
+
+
+<a href="../admin/" class="btn cta-buy">
+                    admin_panel
+                </a>
+
+</body>
+</html>

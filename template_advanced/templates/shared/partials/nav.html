@@ -1,0 +1,15 @@
+<nav>
+
+    {% if page != 'list todos' %}
+        <a href="{% url 'create todo' %}">Create</a>
+    {% endif %}
+
+    {% if page != 'create todo' %}
+        <a href="{% url 'list todos' %}">List</a>
+    {% endif %}
+
+</nav>
+
+
+page_name: {{ page_name }}
+page: {{ page }}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <h1>It works!</h1>
+    <h2>My name is {{ name }}</h2>
+
+    <form method="post" action="{% url 'create person' %}">
+        <input name="name" />
+        <input name="age" />
+        {% csrf_token %}
+        <button>Create</button>
+    </form>
+
+
+    <ul>
+        {% for person in people %}
+        <li>
+        {{ person.name }}, {{ person.age }}
+        {% endfor %}
+            </li>
+    </ul>
+<h1></h1>
+
+
+<a href="phones/" class="btn cta-buy">
+                    Phones
+                </a>
+
+<a href="phones_shop/" class="btn cta-buy">
+                    Shop
+                </a>
+
+
+<a href="phones/" class="btn cta-buy">
+                    Phones
+                </a>
+
+
+<a href="admin/" class="btn cta-buy">
+                    admin_panel
+                </a>
+
+<form action="phones">
+    <input type="submit" value="Phones"/>
+</form>
+
+<form action="phones_shop">
+    <input type="submit" value="Phones Shop"/>
+</form>
+
+
+
+<form action="admin">
+    <input type="submit" value="ADMIN PANEL"/>
+</form>
+
+
+</body>
+</html>
